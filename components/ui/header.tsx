@@ -51,7 +51,7 @@ export default function Header() {
               <li className="ml-6">
                 <Link
                   className="btn-sm inline-flex items-center text-white bg-gray-900 hover:bg-gray-800 group border border-white"
-                  href="/schedule-call"
+                  href="/pricing"
                 >
                   Join Bluelearn Africa
                   <span className="tracking-normal text-blue-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-2">

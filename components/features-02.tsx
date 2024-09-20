@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import FeatImage from "@/public/images/features-01.png";
+import FeatImage from "@/public/images/africa.png";
 
 export default function Features02() {
   const [category, setCategory] = useState<string>("1");
@@ -30,7 +30,7 @@ export default function Features02() {
                   }`}
                   onClick={() => setCategory("1")}
                 >
-                  Flexible Features
+                  Early Tech Talents
                 </button>
                 <button
                   className={`btn-sm m-1.5 h-8 shadow ${
@@ -40,7 +40,7 @@ export default function Features02() {
                   }`}
                   onClick={() => setCategory("2")}
                 >
-                  Flexible Features
+                  Empowering Africans
                 </button>
                 <button
                   className={`btn-sm m-1.5 h-8 shadow ${
@@ -50,7 +50,7 @@ export default function Features02() {
                   }`}
                   onClick={() => setCategory("3")}
                 >
-                  Flexible Features
+                  Fostering Startups
                 </button>
                 <button
                   className={`btn-sm m-1.5 h-8 shadow ${
@@ -60,7 +60,7 @@ export default function Features02() {
                   }`}
                   onClick={() => setCategory("4")}
                 >
-                  Flexible Features
+                  Inclusivity
                 </button>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function Features02() {
                 {/* Content #1 */}
                 <div className={`${category !== "1" && "hidden"}`}>
                   <h3 className="h3 font-cabinet-grotesk mb-3">
-                    The member-owned tech society.
+                    How Bluelearn is helping early tech talents
                   </h3>
                   <p className="text-lg text-gray-500 mb-8">
                     Work is is changing faster than at any other time in
@@ -146,7 +146,7 @@ export default function Features02() {
                 {/* Content #2 */}
                 <div className={`${category !== "2" && "hidden"}`}>
                   <h3 className="h3 font-cabinet-grotesk mb-3">
-                    Find talents, hire and manage them.
+                    Empowering Africans
                   </h3>
                   <p className="text-lg text-gray-500 mb-8">
                     Work is is changing faster than at any other time in
@@ -198,7 +198,7 @@ export default function Features02() {
                 {/* Content #3 */}
                 <div className={`${category !== "3" && "hidden"}`}>
                   <h3 className="h3 font-cabinet-grotesk mb-3">
-                    A model that is fair, inclusive, and empowering.
+                    Startup Culture
                   </h3>
                   <p className="text-lg text-gray-500 mb-8">
                     Work is is changing faster than at any other time in
@@ -250,7 +250,7 @@ export default function Features02() {
                 {/* Content #4 */}
                 <div className={`${category !== "4" && "hidden"}`}>
                   <h3 className="h3 font-cabinet-grotesk mb-3">
-                    This rapid change requires a new hiring model.
+                    Historically Marginalised Regions
                   </h3>
                   <p className="text-lg text-gray-500 mb-8">
                     Work is is changing faster than at any other time in
@@ -327,7 +327,7 @@ export default function Features02() {
                 data-aos-delay="100"
               >
                 <Image
-                  className="mx-auto md:max-w-none"
+                  className="mx-auto md:max-w-none grayscale "
                   src={FeatImage}
                   width="540"
                   height="405"
