@@ -1,16 +1,48 @@
 "use client";
 import Faqs from "@/components/faqs";
 import ModalRegistration from "@/components/modal-registration";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default () => {
   const [showModal, setShowModal] = useState(false);
+  const [redirect_url, setRedirectUrl] = useState("");
+  const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState({
     email: "",
     amount: 0,
     type: "",
     target: "general",
   });
+
+  async function httpInitiateTransaction() {
+    setLoading(true);
+    try {
+      const response = await axios.post(
+        "https://bluelearn-be.onrender.com/payment?type=paystack",
+        {
+          email: selected.email,
+          amount: selected.amount,
+          package: selected.type,
+        }
+      );
+      console.log(response.data);
+      setRedirectUrl(response.data?.data?.authorization_url);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+      throw error;
+    }
+  }
+
+  useEffect(() => {
+    if (redirect_url?.length > 0) {
+      console.log(redirect_url);
+      window.location.href = redirect_url;
+    }
+  }, [redirect_url]);
+
   return (
     <>
       <div className="h-screen bg-gray-900 flex justify-center ">
@@ -357,6 +389,8 @@ export default () => {
         setShowModal={setShowModal}
         selected={selected}
         setSelected={setSelected}
+        httpInitiateTransaction={httpInitiateTransaction}
+        loading={loading}
       />
     </>
   );

@@ -71,7 +71,7 @@ export default function Pricing() {
                   </div>
                   <Link
                     className="btn w-full inline-flex items-center text-white bg-gray-900 hover:bg-gray-800 group"
-                    href="/schedule-call"
+                    href="/pricing"
                   >
                     Start Learning
                     <span className="tracking-normal text-blue-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-2">
@@ -183,7 +183,7 @@ export default function Pricing() {
                   </div>
                   <Link
                     className="btn w-full inline-flex items-center text-white bg-blue-500 hover:bg-blue-600 group"
-                    href="/schedule-call"
+                    href="/pricing"
                   >
                     Start Learning Now
                     <span className="tracking-normal text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-2">
@@ -292,7 +292,7 @@ export default function Pricing() {
                   </div>
                   <Link
                     className="btn w-full inline-flex items-center text-white bg-gray-900 hover:bg-gray-800 group"
-                    href="/schedule-call"
+                    href="/pricing"
                   >
                     Schedule A Call
                     <span className="tracking-normal text-blue-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-2">
